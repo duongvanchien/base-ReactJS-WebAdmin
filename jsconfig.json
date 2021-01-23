@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@Assets/*": ["./src/Assets/*"],
+      "@Components/*": ["./src/Components/*"],
+      "@Constant/*": ["./src/Constant/*"],
+      "@Navigation/*": ["./src/Navigation/*"],
+      "@Redux/*": ["./src/Redux/*"],
+      "@Styles/*": ["./src/Styles/*"],
+      "@Utils/*": ["./src/Utils/*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    "coverage",
+    "dist",
+    "backup-build",
+    "build-test",
+    "public",
+    "back",
+    "lib"
+  ]
+}
