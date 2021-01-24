@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Layout, Menu, Breadcrumb } from "antd";
+import "../Styles/NavBar.css";
+import { Layout, Menu  } from "antd";
 import {
   DesktopOutlined,
   PieChartOutlined,
@@ -8,7 +9,6 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 
-import "../Styles/NavBar.css";
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -19,15 +19,18 @@ class NavBar extends Component {
   };
 
   onCollapse = (collapsed) => {
-    console.log(collapsed);
     this.setState({ collapsed });
   };
 
   render() {
     const { collapsed } = this.state;
     return (
-      <Layout style={{ minHeight: "100vh" }}>
-        <Sider collapsible collapsed={collapsed} onCollapse={this.onCollapse}>
+        <Sider
+          collapsible={true}
+          collapsed={collapsed}
+          onCollapse={this.onCollapse}
+          breakpoint="md"
+        >
           <div className="logo" />
           <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
             <Menu.Item key="1" icon={<PieChartOutlined />}>
@@ -50,25 +53,6 @@ class NavBar extends Component {
             </Menu.Item>
           </Menu>
         </Sider>
-        {/* <Layout className="site-layout">
-          <Header className="site-layout-background" style={{ padding: 0 }} />
-          <Content style={{ margin: "0 16px" }}>
-            <Breadcrumb style={{ margin: "16px 0" }}>
-              <Breadcrumb.Item>User</Breadcrumb.Item>
-              <Breadcrumb.Item>Bill</Breadcrumb.Item>
-            </Breadcrumb>
-            <div
-              className="site-layout-background"
-              style={{ padding: 24, minHeight: 360 }}
-            >
-              Bill is a cat.
-            </div>
-          </Content>
-          <Footer style={{ textAlign: "center" }}>
-            Ant Design ©2018 Created by Ant UED
-          </Footer>
-        </Layout> */}
-      </Layout>
     );
   }
 }

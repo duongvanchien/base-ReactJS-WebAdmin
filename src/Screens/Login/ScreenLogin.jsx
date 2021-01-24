@@ -1,8 +1,25 @@
 import React, { Component } from "react";
 import "./Login.css";
+import { Link } from "react-router-dom";
 
 class ScreenLogin extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      formSignIn: {
+        userName: "0932209058",
+        password: "123456",
+      },
+      formSignUp: {
+        userName: "",
+        password: "",
+        confirmPassword: "",
+        email: "",
+      },
+    };
+  }
   render() {
+    const { formSignIn } = this.state;
     return (
       <div className="login-screen">
         <div className="login-wrap">
@@ -27,7 +44,12 @@ class ScreenLogin extends Component {
                   <label htmlFor="user" className="label">
                     Username
                   </label>
-                  <input id="user" type="text" className="input" />
+                  <input
+                    id="user"
+                    type="text"
+                    className="input"
+                    value={formSignIn.userName}
+                  />
                 </div>
                 <div className="group">
                   <label htmlFor="pass" className="label">
@@ -38,6 +60,7 @@ class ScreenLogin extends Component {
                     type="password"
                     className="input"
                     data-type="password"
+                    value={formSignIn.password}
                   />
                 </div>
                 <div className="group">
@@ -52,11 +75,13 @@ class ScreenLogin extends Component {
                   </label>
                 </div>
                 <div className="group">
-                  <input
-                    type="submit"
-                    className="button"
-                    defaultValue="Sign In"
-                  />
+                  <Link to="/">
+                    <input
+                      type="submit"
+                      className="button"
+                      defaultValue="Sign In"
+                    />
+                  </Link>
                 </div>
                 <div className="hr" />
                 <div className="foot-lnk">

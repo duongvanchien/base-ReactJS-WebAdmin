@@ -1,0 +1,10 @@
+.site-layout-avatar {
+  text-align: end;
+}
+.header-avatar {
+  display: block;
+  margin-right: 14px;
+}
+.ant-avatar {
+  cursor: pointer;
+}

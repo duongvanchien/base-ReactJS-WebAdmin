@@ -7,6 +7,8 @@ import {
 } from "react-router-dom";
 
 import ScreenLogin from "../Screens/Login/ScreenLogin";
+import ScreenNotFound from "../Screens/NotFound/ScreenNotFound";
+import MainNavigator from "./MainNavigator";
 
 export class AppNavigator extends Component {
   constructor(props) {
@@ -20,18 +22,9 @@ export class AppNavigator extends Component {
     return (
       <Router>
         <Switch>
-          <Route path="/" exact component={ScreenLogin} />
-          {/* <Route
-            path={ROUTER.FORGET_PASSWORD}
-            exact
-            component={ForgetPasswordScreen}
-          />
-          <Route path="/PageNotFound" exact component={PageNotFound} />
-          <PrivateRoute
-            path="/"
-            Component={MainNavigator}
-            user={this.props.userInfoState}
-          /> */}
+          <Route path="/Login" exact component={ScreenLogin} />
+          <Route path="/PageNotFound" exact component={ScreenNotFound} />
+          <Route path="/" exact component={MainNavigator} />
         </Switch>
       </Router>
     );
