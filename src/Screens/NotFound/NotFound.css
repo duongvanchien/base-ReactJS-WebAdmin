@@ -5,8 +5,7 @@ span,
 applet,
 object,
 iframe,
-h1,
-h1,
+.description-notfound,
 h2,
 h4,
 h5,
@@ -166,7 +165,7 @@ img {
 /*-- end reset --*/
 .bg-screen-notfound {
   font-family: "Open Sans", sans-serif;
-  background: url("../../Assets/NotFound/bg-screen.jpg") no-repeat center 0px;
+  background: url("@Assets/NotFound/bg-screen.jpg") no-repeat center 0px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -182,12 +181,12 @@ img {
 .w3top-nav-right {
   margin-top: 4em;
 }
-.w3top-nav-left h1 {
+.w3top-nav-left .description-notfound {
   font-size: 3em;
   font-weight: 100;
   line-height: 0.9em;
 }
-.w3top-nav-left h1 a {
+.w3top-nav-left .description-notfound a {
   color: #fff;
 }
 .w3top-nav-right ul li {
@@ -212,7 +211,7 @@ img {
   padding-top: 4em;
   text-align: center;
 }
-h1 {
+.description-notfound {
   font-size: 1.2em;
   color: #fff;
   font-weight: 900;
@@ -356,7 +355,7 @@ p.w3lstext a:hover {
   .w3top-nav-right ul li {
     margin: 0 0.5em;
   }
-  h1 {
+  .description-notfound {
     font-size: 1em;
   }
   p.w3lstext {
@@ -389,7 +388,7 @@ p.w3lstext a:hover {
   .w3layouts-errortext img {
     width: 52%;
   }
-  h1 {
+  .description-notfound {
     font-size: 0.9em;
   }
   .agile-search input[type="text"],
@@ -447,7 +446,7 @@ p.w3lstext a:hover {
   .w3top-nav-right ul li {
     margin: 0 0.6em;
   }
-  h1 {
+  .description-notfound {
     font-size: 0.85em;
   }
   p.w3lstext {

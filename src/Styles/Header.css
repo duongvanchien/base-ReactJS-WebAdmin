@@ -3,8 +3,9 @@
 }
 .header-avatar {
   display: block;
-  margin-right: 14px;
+  margin-right: 16px;
 }
 .ant-avatar {
   cursor: pointer;
 }
+

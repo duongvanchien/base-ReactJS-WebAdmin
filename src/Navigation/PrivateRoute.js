@@ -2,12 +2,12 @@ import React from "react";
 import { Route, Redirect } from "react-router-dom";
 import Cookie from "js-cookie";
 
+import ScreenOverview from "@Screens/Overview/ScreenOverview";
+
 class PrivateRoute extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      verified: false,
-    };
+    this.state = {};
   }
   render() {
     const { path, Component, exact } = this.props;

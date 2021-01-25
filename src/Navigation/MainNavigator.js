@@ -1,11 +1,33 @@
 import React, { Component } from "react";
-import NavBar from "../Components/NavBar";
-import HeaderPage from "../Components/Header";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 
-import { Layout,Breadcrumb } from "antd";
+import NavBar from "@Components/NavBar";
+import HeaderPage from "@Components/Header";
+
+import ScreenOverview from "@Screens/Overview/ScreenOverview.jsx";
+import ScreenOptions from "@Screens/Options/ScreenOptions.jsx";
+import ScreenTutorial from "@Screens/Tutorial/ScreenTutorial.jsx";
+
+import { Layout } from "antd";
+import { ROUTER } from "@Constant/Contant";
 const { Content } = Layout;
 
 class MainNavigator extends Component {
+  renderRoute() {
+    return (
+      <Switch>
+        <Route path={ROUTER.Overview} exact component={ScreenOverview} />
+        <Route path={ROUTER.Options} exact component={ScreenOptions} />
+        <Route path={ROUTER.Tutorial} exact component={ScreenTutorial} />
+      </Switch>
+    );
+  }
+
   render() {
     return (
       <>
@@ -13,18 +35,7 @@ class MainNavigator extends Component {
           <NavBar />
           <Layout className="site-layout">
             <HeaderPage />
-            <Content style={{ margin: "0 16px" }}>
-              <Breadcrumb style={{ margin: "16px 0" }}>
-                <Breadcrumb.Item>User</Breadcrumb.Item>
-                <Breadcrumb.Item>Bill</Breadcrumb.Item>
-              </Breadcrumb>
-              <div
-                className="site-layout-background"
-                style={{ padding: 24, minHeight: 360 }}
-              >
-                Bill is a cat.
-              </div>
-            </Content>
+            <Content style={{ margin: "0 16px" }}>{this.renderRoute()}</Content>
           </Layout>
         </Layout>
       </>

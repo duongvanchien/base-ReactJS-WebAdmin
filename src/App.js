@@ -1,6 +1,6 @@
 import "./App.css";
 import "antd/dist/antd.css";
-import AppNavigator from "./Navigation/AppNavigator";
+import AppNavigator from "@Navigation/AppNavigator";
 
 function App() {
   return (

@@ -9,6 +9,7 @@ module.exports = function (config, env) {
     "@Constant": resolve("./src/Constant/"),
     "@Navigation": resolve("./src/Navigation/"),
     "@Redux": resolve("./src/Redux/"),
+    "@Screens": resolve("./src/Screens/"),
     "@Styles": resolve("./src/Styles/"),
     "@Utils": resolve("./src/Utils/"),
     // etc...

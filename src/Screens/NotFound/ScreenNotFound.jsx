@@ -12,7 +12,7 @@ class NotFound extends Component {
               <h2>
                 4<span className="zero-text">0</span>4
               </h2>
-              <h1>Sorry! The page you were looking for could not be found </h1>
+              <h1 className="description-notfound">Sorry! The page you were looking for could not be found </h1>
               <p className="w3lstext">
                 You have been tricked into click on a link that can not be
                 found. Please check the url or go to{" "}

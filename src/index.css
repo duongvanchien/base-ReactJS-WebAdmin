@@ -13,5 +13,10 @@ code {
 }
 
 * {
-  font-family: "Times New Roman", Times, serif !important;
+  font-family: "Arial", Times, serif !important;
+}
+
+.title-tab {
+  font-size: 1.8rem !important;
+  font-weight: 600!important;
 }

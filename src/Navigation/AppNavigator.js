@@ -6,8 +6,8 @@ import {
   Redirect,
 } from "react-router-dom";
 
-import ScreenLogin from "../Screens/Login/ScreenLogin";
-import ScreenNotFound from "../Screens/NotFound/ScreenNotFound";
+import ScreenLogin from "@Screens/Login/ScreenLogin";
+import ScreenNotFound from "@Screens/NotFound/ScreenNotFound";
 import MainNavigator from "./MainNavigator";
 
 export class AppNavigator extends Component {
@@ -24,7 +24,8 @@ export class AppNavigator extends Component {
         <Switch>
           <Route path="/Login" exact component={ScreenLogin} />
           <Route path="/PageNotFound" exact component={ScreenNotFound} />
-          <Route path="/" exact component={MainNavigator} />
+          <MainNavigator/>
+          {/* <PrivateRoute path="/" exact Component={MainNavigator} /> */}
         </Switch>
       </Router>
     );

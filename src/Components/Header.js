@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "../Styles/Header.css";
-import { Row, Avatar, Layout } from "antd";
+import { Row, Avatar, Layout, Col } from "antd";
 
-import AvatarUser from "../Assets/Header/user-avatar.jpg";
+import AvatarUser from "@Assets/Header/user-avatar.jpg";
 
 const { Header } = Layout;
 
