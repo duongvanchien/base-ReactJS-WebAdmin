@@ -119,7 +119,7 @@ class ScreenLogin extends Component {
                 </div>
                 <div className="group">
                   <label htmlFor="pass" className="label">
-                    Email Address
+                    Email Addresss
                   </label>
                   <input id="pass" type="text" className="input" />
                 </div>
