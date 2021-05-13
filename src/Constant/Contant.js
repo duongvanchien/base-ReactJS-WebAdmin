@@ -5,7 +5,7 @@ const ROUTER = {
   Tutorial: "/huong-dan",
 };
 const STRING = {
-  Overview: "Tổng quan",
+  Overview: "Tổng quan 12345678",
   User: "Người dùng",
   Tutorial: "Hướng dẫn",
   Options: "Tùy chọn",
