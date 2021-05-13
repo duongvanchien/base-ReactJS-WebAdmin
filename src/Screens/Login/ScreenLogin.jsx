@@ -132,7 +132,7 @@ class ScreenLogin extends Component {
                 </div>
                 <div className="hr" />
                 <div className="foot-lnk">
-                  <label htmlFor="tab-1">Member?</label>
+                  <label htmlFor="tab-1">Member? Ok</label>
                 </div>
               </div>
             </div>
